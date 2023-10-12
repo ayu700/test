@@ -8,6 +8,35 @@
     <link rel="shortcut icon" type="image/x-icon" href="favred.ico" />
     <title>Document</title>
 </head>
+<script>
+    string = "<script>alert(1);</script>";
+    console.log(string);
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+
+    console.log(escapeRegExp(string));
+
+    function htmlspecialchars(string) {
+        if (typeof string !== 'string') {
+            return string;
+        }
+        return string.replace(
+            /[&'`"<>]/g,
+            function (match) {
+                return {
+                    '&': '&amp;',
+                    "'": '&#x27;',
+                    '`': '&#x60;',
+                    '"': '&quot;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                }[match]
+            }
+        );
+    }
+    console.log(htmlspecialchars(string));
+</script>
 
 <body>
     <div class="header">
