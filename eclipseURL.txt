@@ -1,0 +1,6 @@
+https://www.javadrive.jp/eclipse3/import/index3.html ソースフォルダの追加
+https://teratail.com/questions/1599 階層構造
+https://okwave.jp/qa/q685118.html　プロジェクトの右クリック→プロパティ
+ビルドパスの設定で、
+ソースメニューを開いてそのフォルダを追加してやると
+いけるとおもいます。
